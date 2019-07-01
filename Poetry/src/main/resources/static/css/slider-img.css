@@ -1,0 +1,30 @@
+body {
+	font: normal 0.9em Arial;
+	color: #222;
+}
+
+header {
+	display: block;
+	font-size: 1.2em;
+	margin-bottom: 40px;
+}
+
+header a, header span {
+	display: inline-block;
+	padding: 4px 8px;
+	margin-right: 10px;
+	border: 2px solid #000;
+	background: #DDD;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	height: 20px;
+}
+
+header span {
+	background: white;
+}
+
+a {
+	color: #1155CC;
+}

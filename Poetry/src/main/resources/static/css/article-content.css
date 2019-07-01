@@ -1,0 +1,37 @@
+.art-title{
+	max-width:300px;
+	max-height:80px;
+	width:100%;
+	height:auto;
+	margin-top:10px;
+	margin-bottom:20px;
+	font-size:30px;
+	font-family: Georgia;
+	float: left;	
+}
+
+.art-time{	
+	margin-bottom:20px;
+	font-size:20px;
+	float: left;
+}
+
+.art-img{
+	margin-right: 50px;
+	max-height: 70px;
+	max-width: 70px;
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+
+.art-content{	
+	float:right;
+	font-size:18px;
+	font-family: Georgia;
+}
+
+.read-more-btn{
+	background-color: #f44336;
+	float:right;
+}
