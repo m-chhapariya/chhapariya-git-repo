@@ -1,37 +1,72 @@
+.articles{
+	padding: 0;
+	margin: 170px 30px 50px 30px;
+	background: #F6F3F4;
+	max-width: 700px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.myArticle{
+	background: #F6F3F4;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .art-title{
-	max-width:300px;
 	max-height:80px;
 	width:100%;
-	height:auto;
+	height:100%;
 	margin-top:10px;
-	margin-bottom:20px;
-	font-size:30px;
+	margin-bottom:10px;
+	font-size:20px;
 	font-family: Georgia;
 	float: left;	
+	color: #7C2B43;
 }
 
 .art-time{	
-	margin-bottom:20px;
-	font-size:20px;
+	margin-bottom:10px;
+	max-height:50px;
+	width:100%;
+	font-size:10px;
 	float: left;
+	color:#7C2B43;
 }
 
 .art-img{
-	margin-right: 50px;
-	max-height: 70px;
-	max-width: 70px;
+	margin: 10px 10px 50px 0;
+	max-height: 230px;
+	max-width: 300px;
 	height: 100%;
 	width: 100%;
 	float: left;
 }
 
 .art-content{	
-	float:right;
-	font-size:18px;
+	margin: 10px 20px 10px 10px;
+	max-height: 140px;
+	max-width: 550px;
+	height: 100%;
+	width: 100%;
+	float:left;
+	font-size:13px;
+	word-wrap: break-word;
 	font-family: Georgia;
+	max-lines: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-height: 2;        /* fallback */
+    max-height: 4;   
+    justify-content: unset;    /* fallback */
 }
 
 .read-more-btn{
-	background-color: #f44336;
+	margin-bottom: 50px;
+	background-color: #ffb08a;
+	font-size:12px;
+	color: white;
 	float:right;
+	position: relative;
 }
