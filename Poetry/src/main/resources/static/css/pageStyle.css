@@ -1,12 +1,12 @@
 @charset "ISO-8859-1";
 
-.topnav {
+#topnav {
   overflow: hidden;
   background-color: #333;
-  max-height:70px;
+  max-height:100px;
 }
 
-.topnav a {
+#topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -15,13 +15,13 @@
   font-size: 12px;
 }
 
-.topnav a:hover {
+#topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+#topnav a.active {
   background-color: #4CAF50;
   color: white;
 }
@@ -36,9 +36,11 @@
 /* Set black background color, white text and some padding  #635F5E */
 footer {
 	color: #7F7B7A;
-	padding: 15px 10px 10px 10px;
+	margin: 5px 10px 5px 10px;
 	min-height:40px; 
-	height: auto;
+    height: 2.5rem; 
+    font-size: 12px;
+    bottom: 0;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -59,7 +61,7 @@ footer {
 }
 
 
-#myContainer{
+#myContainer{	
 	background-image: linear-gradient(to top, rgba(215, 222, 216, 0), rgba(215, 222, 216, 1))
 }
 

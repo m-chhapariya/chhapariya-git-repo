@@ -1,8 +1,8 @@
 .articles{
 	padding: 0;
-	margin: 170px 30px 50px 30px;
+	margin: 160px 30px 50px 30px;
 	background: #F6F3F4;
-	max-width: 700px;
+	max-width: 900px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -33,25 +33,24 @@
 }
 
 .art-img{
-	margin: 10px 10px 50px 0;
-	max-height: 230px;
-	max-width: 300px;
-	height: 100%;
-	width: 100%;
+	padding: 10px 0 10px 0;
+	margin: 0;
+	max-height: 300px;
+	max-width: 170px;
+	height: auto;
+	width: auto;
 	float: left;
 }
 
 .art-content{	
-	margin: 10px 20px 10px 10px;
+	margin: 10px 0 5px 0;
 	max-height: 140px;
-	max-width: 550px;
+	max-width: 500px;
 	height: 100%;
 	width: 100%;
-	float:left;
 	font-size:13px;
 	word-wrap: break-word;
 	font-family: Georgia;
-	max-lines: 5;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -63,7 +62,7 @@
 }
 
 .read-more-btn{
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 	background-color: #ffb08a;
 	font-size:12px;
 	color: white;
