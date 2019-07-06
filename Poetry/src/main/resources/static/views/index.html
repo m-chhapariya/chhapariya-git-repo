@@ -9,18 +9,19 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/pageStyle.css" />
+<link rel="stylesheet" href="/css/signup.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<div class="container">
+	<div class="container" id="fullpage" style="position: relative;">
 		<div id="topnav">
-				<a class="active" href="#">HOME</a> <a href="#">ABOUT</a> <a href="#">GALLERY</a>
-				<a href="#">CONTACT US</a> <a href="#">SUBSCRIBE</a>
+			<a class="active" href="#">HOME</a> <a href="#">ABOUT</a> <a href="#">GALLERY</a>
+			<a href="#">CONTACT US</a> <a href="javascript:void(0);" class="sign-anchor">SUBSCRIBE</a>
 			<form class="navbar-form navbar-right" action="#">
 				<div class="input-group"
-					style="max-width: 170px; margin-right: 4px;">
+					style="max-width: 155px; margin-right: 30px;">
 					<input type="text" class="form-control" placeholder="Search"
 						name="search">
 					<div class="input-group-btn">
@@ -32,51 +33,124 @@
 			</form>
 		</div>
 		<div class="container-fluid text-center" id="myContainer">
-				<div class="col-2 col-sm-2 col-lg-2" style="margin:10px 0 10px 0;">
-					<img id="authorImg" src="/img/author_img.jpg"
-						class="img-circle img-thumbnail" style="margin:10px 0 10px 0;">
-					<div class="side-btn-group"  style="margin:10px 0 10px 0;">
-						<button>AUTHOR</button>
-						<button>ARCHIVE</button>
-						<button>SUBSCRIBE</button>
-					</div>
+			<div class="col-2 col-sm-2 col-lg-2" style="margin: 10px 0 10px 0;">
+				<img id="authorImg" src="/img/author_img.jpg"
+					class="img-circle img-thumbnail" style="margin: 10px 0 10px 0;">
+				<div class="side-btn-group" style="margin: 10px 0 10px 0;">
+					<button>AUTHOR</button>
+					<button>ARCHIVE</button>
+					<button class="sign-anchor">SUBSCRIBE</button>
 				</div>
-				<div class="col-8 col-sm-8 col-lg-8" style="max-height: 1800px;">
-					<!--Slider starts here  -->
-					<div class="row-content">
-						<div id="sliderhtml"></div>
-					</div>
+			</div>
+			<div class="col-8 col-sm-8 col-lg-8 text-center"
+				style="max-height: 1800px; overflow: hidden;">
+				<!--Slider starts here  -->
+				<div class="row-content">
+					<div id="sliderhtml"></div>
+				</div>
 
-					<div class="row-content">
-						<div id="contentDiv">
-												
-						</div>
-					</div>
-					<!--Slider ends here  -->
+				<div class="row-content">
+					<div id="contentDiv"></div>
 				</div>
-				<div class="col-2 col-sm-2 col-lg-2" style="margin:10px 0 0 0;">
-					<img id="side-bar-img" src="/img/side_bar_quote.jpg"
-						style="height:auto;width:165px;">
-				</div>
+				<!--Slider ends here  -->
+			</div>
+			<div class="col-2 col-sm-2 col-lg-2"
+				style="max-width: 190px; max-height: 350px; margin: 10px 0 0 0;">
+				<img id="side-bar-img" src="/img/side_bar_quote.jpg"
+					style="height: 100%; width: 100%; margin-right: 10px;">
+			</div>
 		</div>
 		<footer class="text-center">
 			<i class="glyphicon glyphicon-copyright-mark"></i> <strong>CopyRight
 				- MRHamsafar</strong>
 		</footer>
 	</div>
+	<div class="container-fluid"  id="signupform">
+		<div>
+			<span class="close" title="Cancel Form">&times;</span>
+		</div>
+		<div class="form">
+			<ul class="tab-group">
+				<li class="tab active"><a href="#signup">Sign Up</a></li>
+				<li class="tab"><a href="#login">Log In</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="signup">
+					<h2>Sign Up for Free</h2>
+
+					<form action="/" method="post">
+
+						<div class="top-row">
+							<div class="field-wrap">
+								<label> First Name<span class="req">*</span>
+								</label> <input type="text" required autocomplete="on" />
+							</div>
+
+							<div class="field-wrap">
+								<label> Last Name<span class="req">*</span>
+								</label> <input type="text" required autocomplete="on" />
+							</div>
+						</div>
+
+						<div class="field-wrap">
+							<label> Email Address<span class="req">*</span>
+							</label> <input type="email" required autocomplete="on" />
+						</div>
+
+						<div class="field-wrap">
+							<label> Enter Password<span class="req">*</span>
+							</label> <input type="password" required autocomplete="off" />
+						</div>
+
+						<div class="field-wrap">
+							<label> Confirm Password<span class="req">*</span>
+							</label> <input type="password" required autocomplete="off" />
+						</div>
+
+						<button type="submit" class="button button-block">Get
+							Started</button>
+
+					</form>
+
+				</div>
+
+				<div id="login">
+					<h2>Welcome Back!</h2>
+
+					<form action="/" method="post">
+
+						<div class="field-wrap">
+							<label> Email Address<span class="req">*</span>
+							</label> <input type="email" required autocomplete="off" />
+						</div>
+
+						<div class="field-wrap">
+							<label> Password<span class="req">*</span>
+							</label> <input type="password" required autocomplete="off" />
+						</div>
+
+						<p class="forgot">
+							<a href="#">Forgot Password?</a>
+						</p>
+
+						<button class="button button-block">Log In</button>
+
+					</form>
+
+				</div>
+
+			</div>
+			<!-- tab-content -->
+
+		</div>
+	</div>
+	<!-- /form -->
 </body>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
-<script src="jquery.js"></script>
-<script>
-	$(document).ready(function() {
-		$('#sliderhtml').load("/views/slider.html");
-	});
-	$(document).ready(function() {
-		$('#contentDiv').load("/views/article-content.html");
-	});
-</script>
+<script src="/js/main.js"></script>
+<script src="/js/signup.js"></script>
 </html>

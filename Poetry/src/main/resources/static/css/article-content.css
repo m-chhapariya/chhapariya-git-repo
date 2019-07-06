@@ -37,8 +37,8 @@
 	margin: 0;
 	max-height: 300px;
 	max-width: 170px;
-	height: auto;
-	width: auto;
+	height: 100%;
+	width: 100%;
 	float: left;
 }
 
@@ -56,16 +56,16 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4; /* number of lines to show */
-    line-height: 2;        /* fallback */
+    line-height: 1.5;        /* fallback */
     max-height: 4;   
-    justify-content: unset;    /* fallback */
+    justify-content: flex-start;    /* fallback */
 }
 
 .read-more-btn{
 	margin-bottom: 10px;
+	padding: 2px 2px 2px 2px;
 	background-color: #ffb08a;
-	font-size:12px;
+	font-size:9px;
 	color: white;
 	float:right;
-	position: relative;
 }
