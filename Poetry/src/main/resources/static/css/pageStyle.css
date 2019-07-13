@@ -89,7 +89,7 @@ footer {
   font-size: 13px;
 }
 
-#signupform{
+#signupform, #contact-div{
 	width:100%;
 	height:100%;
 	display: block;

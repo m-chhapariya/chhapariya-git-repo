@@ -47,6 +47,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		// When the user clicks anywhere outside of the modal, close it
 		$('#fullpage').fadeTo("fast",1);	
-		$('#signupform').hide();	
+		$('#signupform').hide();
+		$('#contact-div').hide();
 	});
 });
