@@ -5,17 +5,18 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.OneToMany;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Document("ghazals")
-public class Poetry {
+@Document("Ghazals")
+public class Post {
 
 	@Id
-	@JsonIgnore
 	private int id;
 	
 	@Indexed(unique = true)
@@ -25,27 +26,29 @@ public class Poetry {
 	
 	private LocalDateTime dateTime;
 	
+	@Indexed
 	private int likes;
 	
 	private String imageTitle;
 	
-	private List<Comments> comments;
+	@OneToMany(mappedBy="post")
+	private List<Comment> comments;
 	
-	protected Poetry() {}
+	protected Post() {}
 
-	public Poetry(String title, String content) {
+	public Post(String title, String content) {
 		this.title = title;
 		this.content = content;
-		dateTime = LocalDateTime.now(Clock.systemDefaultZone());
+		this.dateTime = LocalDateTime.now(Clock.systemDefaultZone());
 		this.likes = 0;
 		this.comments = new ArrayList<>();
 	}
 	
-	public List<Comments> getComments() {
+	public List<Comment> getComments() {
 		return comments;
 	}
 
-	public void setComments(List<Comments> comments) {
+	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
 

@@ -3,35 +3,42 @@ package com.myblog.poetry.model;
 import java.time.Clock;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.OneToMany;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Document ("subscribers")
+@Document ("Subscribers")
 public class Subscriber {
 
 	@Id
-	@JsonIgnore
 	private int id;
 	
 	@Indexed(unique=true)
 	private String name;
+	
 	private LocalDate dateOfSubscription;
-	
+
 	private String password;
-	
+
+	@Indexed(unique=true)
 	private String emailId;
 	
 	private int visitPerWeek;
 	
 	private LocalDateTime lastLogin;
 
-	protected Subscriber() {
-		super();
-	}
+	@OneToMany(mappedBy="subscriber")
+	private List<Comment> comments;
+
+	protected Subscriber() {}
 
 	public Subscriber(String name, String password, String emailId) {
 		this.name = name;
@@ -39,6 +46,15 @@ public class Subscriber {
 		this.emailId = emailId;
 		this.dateOfSubscription = LocalDate.now(Clock.systemDefaultZone());
 		this.visitPerWeek = 0;
+		this.comments = new ArrayList<>();
+	}
+	
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
 	}
 
 	public LocalDateTime getLastLogin() {
@@ -67,6 +83,10 @@ public class Subscriber {
 
 	public String getPassword() {
 		return password;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 	public String getEmailId() {
